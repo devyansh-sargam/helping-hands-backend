@@ -14,6 +14,7 @@ dotenv.config();
 
 // Import routes
 const authRoutes = require('./routes/auth.routes');
+const passwordRoutes = require('./routes/password.routes');
 const userRoutes = require('./routes/user.routes');
 const donationRoutes = require('./routes/donation.routes');
 const requestRoutes = require('./routes/request.routes');
@@ -77,6 +78,7 @@ app.get('/health', (req, res) => {
 
 // API Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/auth', passwordRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/donations', donationRoutes);
 app.use('/api/requests', requestRoutes);
