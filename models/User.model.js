@@ -22,7 +22,7 @@ const userSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    required: [true, 'Please provide a phone number'],
+    required: false, // CHANGED: Phone is now optional
     match: [/^[0-9]{10}$/, 'Please provide a valid 10-digit phone number']
   },
   password: {
