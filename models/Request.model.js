@@ -51,16 +51,18 @@ const requestSchema = new mongoose.Schema({
   },
   requesterPhone: {
     type: String,
-    required: true
+    required: false // CHANGED: Phone is now optional
   },
   location: {
     city: {
       type: String,
-      required: true
+      required: true,
+      default: 'Bhopal' // CHANGED: Default city is now Bhopal
     },
     state: {
       type: String,
-      required: true
+      required: true,
+      default: 'Madhya Pradesh' // CHANGED: Default state for Bhopal
     },
     country: {
       type: String,
